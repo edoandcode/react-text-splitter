@@ -80,7 +80,7 @@ const TextSplitter = forwardRef((props, ref) => {
         {
             lines.map((line, i) => {
               return (
-                <Line key={line[0][0][0] + i}>
+                <Line key={line.join() + i}>
                   {
                       line.map((word, j) => {
                         const wrd = word.join('')
