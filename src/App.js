@@ -17,24 +17,10 @@ function App() {
           At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga. Et harum quidem rerum facilis est et expedita distinctio.
         </TextSplitter>
       </h1>
+
       <h1>
         <RevealText 
-          inview={active}
-          //animateLines
-          maskLines
-          config={{
-            friction: 56,
-            tension: 2000,
-            mass: 0.5,
-          }}
-        >
-          At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga. Et harum quidem rerum facilis est et expedita distinctio.
-        </RevealText>
-      </h1>
-
-      <h2>
-        <RevealText 
-          inview={active}
+          inView={active}
           animateLines={true}
           maskLines
           config={{
@@ -45,11 +31,11 @@ function App() {
         >
           At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga. Et harum quidem rerum facilis est et expedita distinctio.
         </RevealText>
-      </h2>
+      </h1>
 
-      <h2>
+      <h1>
         <RevealText 
-          inview={active}
+          inView={active}
           animateWords={true}
           maskLines
           config={{
@@ -60,11 +46,32 @@ function App() {
         >
           At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga. Et harum quidem rerum facilis est et expedita distinctio.
         </RevealText>
-      </h2>
+      </h1>
 
       <h1>
         <RevealText 
-          inview={active}
+          inView={active}
+          maskLines
+          from={(inView) => ({
+            opacity: 0,
+            scale: 3 
+          })}
+          to={(inView) => ({
+            opacity: 1,
+            scale: 1,
+          })}
+          config={{
+            friction: 56,
+            tension: 2000,
+            mass: 0.5,
+          }}
+        >
+          At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga. Et harum quidem rerum facilis est et expedita distinctio.
+        </RevealText>
+      </h1>
+      <h1>
+        <RevealText 
+          inView={active}
           animateLines
           maskLines
           config={{

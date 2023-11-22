@@ -17,7 +17,7 @@ const Styled = {
     color: #ffff00;
     position: absolute;
     width: 100%;
-    visibility: hidden;
+    visibility: visible;
   `,
 }
 

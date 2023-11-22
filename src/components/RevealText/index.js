@@ -3,13 +3,23 @@ import { useTrail } from '@react-spring/web';
 import AnimatedTextSplitter from "./AnimatedTextSplitter";
 
 const RevealText = (props) => {
-    const {children, inView, from, to, animateLines, animateWords, maskLines, config} = props
+    const {
+      children, 
+      inView, 
+      from, 
+      to, 
+      animateLines, 
+      animateWords, 
+      maskLines, 
+      config,
+      delay
+    } = props
     const [items, setItems] = useState([])
     const onRefChange = useCallback((node) => {
         let nodes
-        if (animateLines) nodes = node?.querySelectorAll('span.line')
-        else if(animateWords) nodes = node?.querySelectorAll('span.word') 
-        else nodes =  node?.querySelectorAll('span.char')
+        if (animateLines) nodes = node?.querySelectorAll('.line')
+        else if(animateWords) nodes = node?.querySelectorAll('.word') 
+        else nodes =  node?.querySelectorAll('.char')
         setItems(nodes)      
     }, [animateLines, animateWords])
 
@@ -21,7 +31,8 @@ const RevealText = (props) => {
     const trail = useTrail(items.length, {
         from: from(inView),
         to: to(inView),
-        config
+        config,
+        delay
       })
     
     return (
@@ -54,7 +65,7 @@ RevealText.defaultProps = {
       tension: 49,
       friction: 19,
     },
-
+    delay: 0
   }
 
 export default RevealText
