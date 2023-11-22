@@ -32,6 +32,36 @@ function App() {
         </RevealText>
       </h1>
 
+      <h2>
+        <RevealText 
+          inview={active}
+          animateLines={true}
+          maskLines
+          config={{
+            friction: 40,
+            tension: 300,
+            mass: 1,
+          }}
+        >
+          At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga. Et harum quidem rerum facilis est et expedita distinctio.
+        </RevealText>
+      </h2>
+
+      <h2>
+        <RevealText 
+          inview={active}
+          animateWords={true}
+          maskLines
+          config={{
+            friction: 40,
+            tension: 300,
+            mass: 1,
+          }}
+        >
+          At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga. Et harum quidem rerum facilis est et expedita distinctio.
+        </RevealText>
+      </h2>
+
       <h1>
         <RevealText 
           inview={active}

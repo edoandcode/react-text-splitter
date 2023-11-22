@@ -1,16 +1,20 @@
 import { memo } from 'react'
 import {a} from '@react-spring/web'
+import styled from 'styled-components'
+
+const AnimatedWord = styled(a.span)`
+  display: ${({$whitespace}) => $whitespace ? 'inline' : 'inline-block'};
+`
 
 function Word({ children, style }) {
   return (
-    <a.span
+    <AnimatedWord
       className="word"
-      style={{
-        display: (children === ' ' ? 'inline' : 'inline-block'),
-      }}
+      $whitespace={children === ' '}
+      style={style}
     >
       {children}
-    </a.span>
+    </AnimatedWord>
   )
 }
 export default memo(Word)

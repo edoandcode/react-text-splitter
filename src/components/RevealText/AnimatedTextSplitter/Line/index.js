@@ -2,7 +2,8 @@ import { memo } from 'react'
 import {a} from '@react-spring/web'
 import styled from 'styled-components'
 
-const PWrapper = styled.p`
+const Mask = styled.span`
+    display: block;
     overflow: ${({$maskLine}) => $maskLine ? 'hidden' : 'visible'};
 `
 
@@ -12,14 +13,14 @@ const AnimatedLine = styled(a.span)`
 
 function Line({ children, style, maskLines }) {
   return (
-    <PWrapper
+    <Mask
       className="line"
       $maskLine={maskLines}
     >
       <AnimatedLine style={style} >
         {children}
       </AnimatedLine>
-    </PWrapper>
+    </Mask>
   )
 }
 
