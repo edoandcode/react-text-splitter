@@ -3,7 +3,7 @@ import {a} from '@react-spring/web'
 import styled from 'styled-components'
 
 const AnimatedChar = styled(a.span)`
-  display: ${({$whiteSpace}) => $whiteSpace ? 'inline' : 'inline-block'} ;
+  display: inline;
 `
 
 function Char({ children, style }) {
@@ -12,7 +12,6 @@ function Char({ children, style }) {
     <AnimatedChar
       className={className}
       style={style}
-      $whiteSpace={className === 'white-space'}
     >
       {children}
     </AnimatedChar>
