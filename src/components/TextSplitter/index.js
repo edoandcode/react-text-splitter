@@ -36,13 +36,15 @@ const TextSplitter = forwardRef((props, ref) => {
     let prevY
     const newLines = []
     const words = Array.from(el.children)
+    const isSingleWord = words.length === 1
     let isLastWord = false
     for (let i = 0; i < words.length; i++) {
       isLastWord = i === words.length - 1
       const w = words[i]
       const y = w.getBoundingClientRect().top
       if (prevY !== y && w.textContent.trim().length) {
-        newLines.push([])
+        if(isSingleWord) newLines.push([w.textContent.trim().split('')])
+        else newLines.push([])
         prevY = y
       }
       if (prevY === y) {
