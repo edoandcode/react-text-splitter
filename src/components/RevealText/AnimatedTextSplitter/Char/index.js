@@ -3,6 +3,7 @@ import { a } from '@react-spring/web'
 import styled from 'styled-components'
 
 const AnimatedChar = styled(a.i)`
+  // tag <i> is animable with inline property while <span> is not 
   display: inline;
   font-style: normal;
 `
