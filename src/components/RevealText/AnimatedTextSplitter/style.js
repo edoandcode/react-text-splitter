@@ -8,7 +8,11 @@ const Styled = {
   SplittedText: styled.span`
     display: inline-block;
     position: relative;
-    & p.line {
+    & * {
+      transform-style: preserve-3d;
+      perspective: 800px;
+    }
+    & .line {
       margin: 0px;
     }
   `,
