@@ -9,15 +9,15 @@ const AnimatedChar = styled(a.i)`
 `
 
 function Char({ children, style }) {
-  const className = children === ' ' ? 'char white-space' : 'char'
-  return (
-    <AnimatedChar
-      className={className}
-      style={style}
-    >
-      {children}
-    </AnimatedChar>
-  )
+   const className = children === ' ' ? 'char white-space' : 'char'
+   return (
+      <AnimatedChar
+         className={className}
+         style={style}
+      >
+         {children}
+      </AnimatedChar>
+   )
 }
 
 export default memo(Char)

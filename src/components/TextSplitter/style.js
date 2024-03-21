@@ -1,18 +1,18 @@
 import styled from 'styled-components'
 
 const Styled = {
-  TextSplitterRoot: styled.span`
+   TextSplitterRoot: styled.span`
     display: block;
     position: relative;
   `,
-  SplittedText: styled.span`
+   SplittedText: styled.span`
     display: inline-block;
     position: relative;
     & p.line {
       margin: 0px;
     }
   `,
-  GuideText: styled.span`
+   GuideText: styled.span`
     display: inline-block;
     color: #ffff00;
     position: absolute;

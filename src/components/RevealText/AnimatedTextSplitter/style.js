@@ -1,11 +1,11 @@
 import styled from 'styled-components'
 
 const Styled = {
-  AnimatedTextSplitterRoot: styled.span`
+   AnimatedTextSplitterRoot: styled.span`
     display: block;
     position: relative;
   `,
-  SplittedText: styled.span`
+   SplittedText: styled.span`
     display: inline-block;
     position: relative;
     & * {
@@ -16,12 +16,12 @@ const Styled = {
       margin: 0px;
     }
   `,
-  GuideText: styled.span`
+   GuideText: styled.span`
     display: inline-block;
     color: #ffff00;
     position: absolute;
     width: 100%;
-    visibility: visible;
+    visibility: hidden;
   `,
 }
 
